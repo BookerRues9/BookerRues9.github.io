@@ -1,4 +1,4 @@
-# BookerRues9.github.io
+# QuickTale Privacy Policy
 Privacy Policy
 Effective date: April 16, 2025
 This Privacy Policy applies to the Android application QuickTale, developed and published by Booker Dev.
