@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XDeltaTool - Patch Your Files</title>
+  <!-- Material Design Colors & Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-primary: #ff7043; /* Material Deep Orange 400 */
+      --color-primary-dark: #d84315;
+      --color-secondary: #ffa726; /* Material Orange 400 */
+      --color-bg: #fafafa;
+      --color-surface: #fff;
+      --color-text-primary: #212121;
+      --color-text-secondary: #757575;
+      --color-error: #b00020;
+      --font-family: 'Roboto', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: var(--color-primary);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    main {
+      flex: 1;
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: var(--color-surface);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
+    h1 {
+      margin-top: 0;
+      color: var(--color-primary-dark);
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button {
+      background-color: var(--color-primary);
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 1rem 0.5rem 0 0;
+      transition: background-color 0.3s ease;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    button:hover:not(:disabled) {
+      background-color: var(--color-primary-dark);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .ad-container {
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 4px;
+      background-color: #fff3e0;
+      color: var(--color-primary-dark);
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--color-text-secondary);
+      padding: 1rem 2rem;
+      background-color: var(--color-bg);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    XDeltaTool — Patch Your Files with Ease
+  </header>
+
+  <main>
+    <h1>Patch Files Using XDelta</h1>
+    <p>Select the file to patch and the xdelta patch file below.</p>
+
+    <form id="patchForm" onsubmit="event.preventDefault(); applyPatch();">
+      <label for="inputFile">File to Patch:</label>
+      <input type="file" id="inputFile" accept="*" required />
+
+      <label for="xdeltaFile">XDelta Patch File (.xdelta):</label>
+      <input type="file" id="xdeltaFile" accept=".xdelta" required />
+
+      <div class="actions">
+        <button id="patchBtn" type="submit">Apply Patch</button>
+      </div>
+    </form>
+
+    <div id="resultMessage" style="margin-top: 1rem; color: var(--color-primary-dark); font-weight: 600;"></div>
+
+    <div class="actions">
+      <button id="loadPatchBtn" disabled title="Unlock to enable" onclick="loadPatchToQuickTale()">Load Patch in QuickTale XD</button>
+      <button id="disableAdsBtn" onclick="purchaseDisableAds()">Disable Ads</button>
+    </div>
+
+    <div class="ad-container" id="adContainer">
+      <!-- AdMob ads will appear here -->
+      Ads by Google AdMob
+    </div>
+
+    <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 2rem;">
+      Privacy Notice: We do not collect or share any personal user data except as required by Google Play policies for billing and ads.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 XDeltaTool. All rights reserved.
+  </footer>
+
+  <script>
+    // Placeholder functions for SAF and patching logic
+
+    async function applyPatch() {
+      const inputFile = document.getElementById('inputFile').files[0];
+      const xdeltaFile = document.getElementById('xdeltaFile').files[0];
+      const resultMessage = document.getElementById('resultMessage');
+
+      if (!inputFile || !xdeltaFile) {
+        resultMessage.textContent = "Please select both files.";
+        return;
+      }
+
+      // TODO: Add real patching logic here using xdelta JS or backend API
+
+      resultMessage.textContent = "Patching in progress...";
+
+      try {
+        // Simulate patching delay
+        await new Promise(r => setTimeout(r, 1500));
+        
+        // After patch applied successfully:
+        resultMessage.textContent = "Patch applied successfully!";
+        document.getElementById('loadPatchBtn').disabled = false;
+      } catch (error) {
+        resultMessage.textContent = "Error applying patch: " + error.message;
+      }
+    }
+
+    function loadPatchToQuickTale() {
+      // TODO: Implement billing check here before allowing loading patch
+
+      alert("This would launch QuickTale XD with the patched file.");
+    }
+
+    function purchaseDisableAds() {
+      // TODO: Integrate Google Play Billing here to remove ads
+
+      alert("This would start the purchase flow to disable ads.");
+    }
+
+    // On page load, check billing state to enable/disable buttons & ads (mock)
+    window.onload = () => {
+      // Simulate ads enabled
+      document.getElementById('adContainer').style.display = 'block';
+
+      // Simulate user not purchased yet
+      document.getElementById('loadPatchBtn').disabled = true;
+    };
+  </script>
+</body>
+</html>
