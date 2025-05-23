@@ -4,71 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XDeltaTool Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> />
+  <!-- Fuente Roboto desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #171216;
-      font-family: "Roboto", sans-serif;
-      color: #fefefe;
+      padding: 40px 20px;
+      background-color: #121212; /* Material Dark background */
+      font-family: 'Roboto', sans-serif;
+      color: #e0e0e0;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 40px 20px;
+      min-height: 100vh;
     }
 
     .container {
-      background-color: #171216;
-      border: 2px solid #ffffff;
-      border-radius: 16px;
+      background-color: #1e1e1e; /* dark card background */
+      border-radius: 12px;
       max-width: 800px;
       width: 100%;
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      padding: 40px 40px 60px 40px;
+      box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.9),
+        0 1px 3px rgba(0, 0, 0, 0.8);
+      position: relative;
     }
 
-    h1, h2 {
+    /* Espacio para logo arriba a la derecha */
+    .logo-container {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 4px #00fff2);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container:hover img {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 8px;
       color: #00fff2;
+      letter-spacing: 1.2px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      color: #00bfa5;
+      border-bottom: 2px solid #00bfa5;
+      padding-bottom: 4px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    strong {
+      color: #fff;
     }
 
     a {
-      color: #3432c7;
+      color: #00bfa5;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    p {
-      margin-bottom: 16px;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
     @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
       .container {
-        padding: 20px;
+        padding: 30px 20px 50px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
       }
 
       p {
-        font-size: 10px;
+        font-size: 0.9rem;
+      }
+
+      .logo-container {
+        width: 60px;
+        height: 60px;
+        top: 16px;
+        right: 16px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Logo con link a Google -->
+    <a href="https://www.google.com" target="_blank" class="logo-container" aria-label="XDeltaTool Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Windows_XP_logo.svg/1024px-Windows_XP_logo.svg.png" alt="XDeltaTool Logo" />
+    </a>
+
     <h1>XDeltaTool Privacy Policy</h1>
-    <p><strong>Effective date:</strong>16/05/2025</p>
+    <p><strong>Effective date:</strong> 16/05/2025</p>
 
     <p>This Privacy Policy applies to the Android application <strong>XDeltaTool</strong>, developed and published by Booker Dev.</p>
 
-    <p>XDelta Tool uses third-party services to provide a better experience and monetization options. These include:</p>
+    <p>XDeltaTool uses third-party services to provide a better experience and monetization options. These include:</p>
 
     <h2>Advertising</h2>
-    <p>This app uses Google AdMob to display ads. AdMob may collect data such as device identifiers, usage data, and interaction data to show personalized or non-personalized ads in accordance with their <a href="https://policies.google.com/technologies/ads" target="_blank">privacy policies</a>.</p>
+    <p>This app uses Google AdMob to display ads. AdMob may collect data such as device identifiers, usage data, and interaction data to show personalized or non-personalized ads in accordance with their <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">privacy policies</a>.</p>
 
     <h2>In-App Purchases</h2>
     <p>Google Play Billing is used to offer an optional in-app purchase to remove ads. All purchases are handled securely by Google Play. We do not collect or store any payment information.</p>
