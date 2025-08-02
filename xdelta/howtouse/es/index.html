@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cómo usar XDeltaTool</title>
+  <style>
+    :root {
+      --primary: #EFB4E8;
+      --on-primary: #4B1F4A;
+      --primary-container: #643662;
+      --on-primary-container: #FFD6F8;
+      --secondary: #D9BFD3;
+      --on-secondary: #3C2B3A;
+      --background: #171216;
+      --on-background: #EBDFE6;
+      --surface: #241E22;
+      --on-surface: #EBDFE6;
+      --outline: #9A8D96;
+    }
 
+    body {
+      background-color: var(--background);
+      color: var(--on-background);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    h1 {
+      color: var(--primary);
+    }
+
+    .section {
+      background-color: var(--surface);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section h2 {
+      color: var(--on-primary-container);
+    }
+
+    .screenshot {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 15px 0;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: var(--on-surface);
+      padding-top: 40px;
+    }
+
+    .language-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: var(--primary-container);
+      color: var(--on-primary-container);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="language-switcher" onclick="location.href='../'">🌐 Español ▼</button>
+
+  <header>
+    <img src="https://lh3.googleusercontent.com/o4hxhEfqdRL5XQF6FwORBUuCtUrpNalzKqkUre2pcbPEiqZHrasshvLkdsRdNhKPxSNcvvh5vAUbyjbeOW9LuQg" alt="Logo de XDeltaTool">
+    <h1>Cómo usar XDeltaTool</h1>
+  </header>
+
+  <div class="section">
+    <h2>Aplicar un parche</h2>
+    <p>Para aplicar un parche, ve a la pestaña <strong>Patch</strong> en la app.</p>
+    <img src="images/patch_tab.png" alt="Pestaña Patch" class="screenshot">
+
+    <p>Pulsa el botón <strong>Select Files</strong>. Aparecerá un diálogo:</p>
+    <img src="images/select_files_patch.png" alt="Seleccionar archivos para parchear" class="screenshot">
+
+    <ul>
+      <li>Selecciona el <strong>archivo de parche .xdelta</strong></li>
+      <li>Selecciona el <strong>archivo que quieres parchear</strong></li>
+    </ul>
+
+    <p>Una vez seleccionados, pulsa <strong>Patch</strong>.</p>
+    <img src="images/patch_success.png" alt="Parche aplicado con éxito" class="screenshot">
+
+    <p>Para guardar el archivo resultante, pulsa <strong>Save Patched File</strong>.</p>
+    <img src="images/save_patched_file.png" alt="Guardar archivo parcheado" class="screenshot">
+  </div>
+
+  <div class="section">
+    <h2>Crear un parche</h2>
+    <p>Ve a la pestaña <strong>Create Patch</strong>.</p>
+    <img src="images/create_tab.png" alt="Pestaña Create Patch" class="screenshot">
+
+    <p>Pulsa <strong>Select Files</strong>. Aparecerá un diálogo:</p>
+    <img src="images/select_files_create.png" alt="Seleccionar archivos original y modificado" class="screenshot">
+
+    <ul>
+      <li>Selecciona el <strong>archivo modificado</strong></li>
+      <li>Selecciona el <strong>archivo original</strong></li>
+    </ul>
+
+    <p>Luego pulsa <strong>Create XDelta Patch</strong>.</p>
+    <img src="images/create_success.png" alt="Parche creado correctamente" class="screenshot">
+
+    <p>Para guardar el parche, pulsa <strong>Save XDelta File to External Storage</strong>.</p>
+    <img src="images/save_patch.png" alt="Guardar archivo xdelta" class="screenshot">
+  </div>
+
+  <div class="section">
+    <h2>Opcional: Limpiar caché</h2>
+    <p>Después de guardar, la app puede ofrecerte limpiar la caché. Esto es opcional, pero recomendable.</p>
+    <img src="images/clear_cache.png" alt="Diálogo para limpiar caché" class="screenshot">
+  </div>
+
+  <footer>
+    <p>XDeltaTool — Hecho por <strong>booker.dev</strong> © 2024–<span id="year"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
