@@ -79,15 +79,20 @@
       background-color: var(--primary-container);
       color: var(--on-primary-container);
       border: none;
-      padding: 10px 15px;
       border-radius: 8px;
-      cursor: pointer;
+      padding: 10px;
+      font-size: 1em;
     }
   </style>
 </head>
 <body>
 
-  <button class="language-switcher" onclick="location.href='../'">🌐 Español ▼</button>
+  <!-- Selector de idioma -->
+  <select class="language-switcher" onchange="changeLanguage(this.value)">
+    <option value="es" selected>🌐 Español</option>
+    <option value="en">🌐 English</option>
+    <!-- Agrega más idiomas si los tienes -->
+  </select>
 
   <header>
     <img src="https://lh3.googleusercontent.com/o4hxhEfqdRL5XQF6FwORBUuCtUrpNalzKqkUre2pcbPEiqZHrasshvLkdsRdNhKPxSNcvvh5vAUbyjbeOW9LuQg" alt="Logo de XDeltaTool">
@@ -140,12 +145,20 @@
     <img src="images/clear_cache.png" alt="Diálogo para limpiar caché" class="screenshot">
   </div>
 
-  <footer>
+   <footer>
     <p>XDeltaTool — Hecho por <strong>booker.dev</strong> © 2024–<span id="year"></span></p>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function changeLanguage(lang) {
+      if (lang === "en") {
+        window.location.href = "/howtouse/en/index.html";
+      } else if (lang === "es") {
+        window.location.href = "/howtouse/es/index.html";
+      }
+    }
   </script>
 </body>
 </html>
