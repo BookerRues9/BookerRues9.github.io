@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Use XDeltaTool</title>
   <style>
     :root {
@@ -12,72 +12,56 @@
       --on-primary-container: #FFD6F8;
       --secondary: #D9BFD3;
       --on-secondary: #3C2B3A;
-      --secondary-container: #544151;
-      --on-secondary-container: #F6DBF0;
-      --tertiary: #F6B8A9;
-      --on-tertiary: #4C261C;
       --background: #171216;
       --on-background: #EBDFE6;
       --surface: #241E22;
       --on-surface: #EBDFE6;
-      --surface-variant: #4E444B;
-      --on-surface-variant: #D1C3CC;
       --outline: #9A8D96;
     }
 
     body {
-      margin: 0;
-      padding: 0 20px;
-      font-family: Arial, sans-serif;
       background-color: var(--background);
       color: var(--on-background);
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
     }
 
     header {
       text-align: center;
-      padding: 40px 0 20px;
+      margin-bottom: 40px;
     }
 
-    header h1 {
-      font-size: 2.2em;
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    h1 {
       color: var(--primary);
-      margin: 0;
     }
 
-    header p {
-      color: var(--on-surface-variant);
-      font-size: 1em;
-    }
-
-    .step {
+    .section {
       background-color: var(--surface);
-      color: var(--on-surface);
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      max-width: 800px;
       border: 1px solid var(--outline);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .step h2 {
-      color: var(--primary);
-      margin-top: 0;
-    }
-
-    .step img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-      border: 2px solid var(--surface-variant);
+    .section h2 {
+      color: var(--on-primary-container);
     }
 
     footer {
       text-align: center;
-      color: var(--on-surface-variant);
       font-size: 0.9em;
-      padding: 40px 0 20px;
+      color: var(--on-surface);
+      padding-top: 40px;
     }
 
     .language-switcher {
@@ -87,56 +71,46 @@
       background-color: var(--primary-container);
       color: var(--on-primary-container);
       border: none;
-      padding: 8px 12px;
+      padding: 10px 15px;
       border-radius: 8px;
-      font-size: 14px;
       cursor: pointer;
-      z-index: 1000;
-    }
-
-    @media (max-width: 600px) {
-      .step {
-        padding: 15px;
-      }
-
-      header h1 {
-        font-size: 1.5em;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Language Switcher (non-functional for now) -->
   <button class="language-switcher">🌐 English ▼</button>
 
   <header>
+    <img src="logo.png" alt="XDeltaTool Logo">
     <h1>How to Use XDeltaTool</h1>
-    <p>A quick guide to patch and launch DT using your game files</p>
   </header>
 
-  <div class="step">
-    <h2>Step 1: Open the App</h2>
-    <p>Launch XDeltaTool. Make sure it’s installed correctly on your device.</p>
-    <img src="placeholder1.png" alt="App Home Screenshot"/>
+  <div class="section">
+    <h2>Patching a File</h2>
+    <p>To patch a file, go to the <strong>Patch</strong> tab in the app. Tap the <strong>Select Files</strong> button. An alert dialog will appear with two options:</p>
+    <ul>
+      <li>Select the <strong>.xdelta patch file</strong></li>
+      <li>Select the <strong>file to be patched</strong></li>
+    </ul>
+    <p>Once both files are selected, tap <strong>Patch</strong>. A dialog will confirm that patching was successful.</p>
+    <p>To save the patched file to external storage, press <strong>Save Patched File</strong>. This opens a SAF window to choose a location.</p>
   </div>
 
-  <div class="step">
-    <h2>Step 2: Select Game Files</h2>
-    <p>Browse to your Steam installation and select the folder containing the DT game files.</p>
-    <img src="placeholder2.png" alt="File Selection Screenshot"/>
+  <div class="section">
+    <h2>Creating a Patch</h2>
+    <p>Go to the <strong>Create Patch</strong> tab. Tap the <strong>Select Files</strong> button. A dialog appears with two options:</p>
+    <ul>
+      <li>Select the <strong>modified file</strong></li>
+      <li>Select the <strong>original file</strong></li>
+    </ul>
+    <p>Then tap <strong>Create XDelta Patch</strong>. A dialog will confirm success.</p>
+    <p>To save the newly created <code>.xdelta</code> patch to external storage, press <strong>Save XDelta File to External Storage</strong> and use the SAF file picker.</p>
   </div>
 
-  <div class="step">
-    <h2>Step 3: Patch Automatically</h2>
-    <p>The app applies the .xdelta patch. No file renaming or manual steps are needed.</p>
-    <img src="placeholder3.png" alt="Patch Screenshot"/>
-  </div>
-
-  <div class="step">
-    <h2>Step 4: Launch DT</h2>
-    <p>When finished, tap “Launch”. DT should start with the new patch active.</p>
-    <img src="placeholder4.png" alt="Launch Screenshot"/>
+  <div class="section">
+    <h2>Optional: Clear Cache</h2>
+    <p>After saving, the app may show a dialog offering to clear its cache. This is optional but helps keep the app clean.</p>
   </div>
 
   <footer>
@@ -146,6 +120,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
