@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeltaQuick Launcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #8fe8fc;
+      --on-primary: #00131A;
+      --primary-container: #005B87;
+      --on-primary-container: #C8F5FF;
+      --secondary: #0B0F13;
+      --on-secondary: #A0B8C8;
+      --secondary-container: #1C2733;
+      --on-secondary-container: #D3E9F8;
+      --tertiary: #337DFF;
+      --on-tertiary: #000914;
+      --tertiary-container: #2B3E50;
+      --on-tertiary-container: #D2E7FF;
+      --background: #05080B;
+      --on-background: #BFD6EC;
+      --surface: #0B1117;
+      --on-surface: #C5D8F0;
+      --surface-variant: #2B3C48;
+      --on-surface-variant: #B2C7DB;
+      --outline: #3A4D60;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--on-background);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background-color: var(--surface);
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--on-surface-variant);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--outline);
+      padding-bottom: 0.3rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--on-surface);
+    }
+
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: var(--tertiary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: var(--on-surface-variant);
+      margin-top: 3rem;
+      border-top: 1px solid var(--surface-variant);
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DeltaQuick</h1>
+    <p>A simple launcher for running all available chapters of <strong>DT</strong> on Android.</p>
+
+    <h2>What is DeltaQuick?</h2>
+    <p>DeltaQuick is a lightweight and clean launcher that lets you run chapters 1 to 4 of DT from one place. The app does not include any game files—you must legally own them through your PC version.</p>
+
+    <h2>Main Features</h2>
+    <ul>
+      <li>Launch DT chapters 1–4 with ease</li>
+      <li>Offline support after setup</li>
+      <li>No ads, tracking, or extra permissions</li>
+      <li>Automatic updates via Google Play</li>
+    </ul>
+
+    <h2>How to Use</h2>
+    <ol>
+      <li>Transfer your DT files from your PC (Steam version is required)</li>
+      <li>Place them in the appropriate folder as described inside the app</li>
+      <li>Open DeltaQuick and launch your preferred chapter</li>
+    </ol>
+
+    <h2>Privacy Policy</h2>
+    <p>DeltaQuick does not collect, store, or share any personal data. The app works entirely offline, except when checking for updates through Google Play.</p>
+
+    <footer>
+      <p>&copy; 2025 DeltaQuick Project. This launcher is unofficial and made for personal use only. DT and related content are trademarks of their respective owners.</p>
+    </footer>
+  </div>
+</body>
+</html>
 
