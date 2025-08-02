@@ -7,18 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #8fe8fc;
-      --on-primary: #00131A;
-      --primary-container: #005B87;
-      --on-primary-container: #C8F5FF;
-      --secondary-container: #1C2733;
-      --on-secondary-container: #D3E9F8;
-      --background: #05080B;
-      --on-background: #BFD6EC;
-      --surface: #0B1117;
-      --on-surface: #C5D8F0;
-      --outline: #3A4D60;
-      --shadow: rgba(0, 0, 0, 0.7);
+      --primary: #EFB4E8;
+      --onPrimary: #4B1F4A;
+      --primaryContainer: #643662;
+      --onPrimaryContainer: #FFD6F8;
+      --secondaryContainer: #544151;
+      --onSecondaryContainer: #F6DBF0;
+      --background: #171216;
+      --onBackground: #EBDFE6;
+      --surface: #241E22;
+      --cardShadow: rgba(0, 0, 0, 0.6);
     }
 
     * {
@@ -30,7 +28,7 @@
       padding: 40px 20px;
       background-color: var(--background);
       font-family: 'Roboto', sans-serif;
-      color: var(--on-background);
+      color: var(--onBackground);
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -38,14 +36,13 @@
     }
 
     .container {
-      background-color: var(--surface);
-      border-radius: 20px;
+      background-color: var(--secondaryContainer);
+      border-radius: 16px;
       max-width: 800px;
       width: 100%;
-      padding: 40px 40px 60px;
-      box-shadow: 0 6px 18px var(--shadow);
+      padding: 40px;
+      box-shadow: 0 6px 18px var(--cardShadow);
       position: relative;
-      border: 1px solid var(--outline);
     }
 
     .logo-container {
@@ -55,28 +52,25 @@
       width: 80px;
       height: 80px;
       cursor: pointer;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 0 8px var(--primary);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .logo-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 8px var(--primary);
+      transition: transform 0.3s ease;
     }
 
-    .logo-container:hover {
+    .logo-container:hover img {
       transform: scale(1.05);
-      box-shadow: 0 0 16px var(--primary);
     }
 
     h1 {
       font-weight: 700;
-      font-size: 2.4rem;
-      margin-bottom: 12px;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       color: var(--primary);
     }
 
@@ -85,17 +79,16 @@
       font-size: 1.4rem;
       margin-top: 36px;
       margin-bottom: 16px;
-      color: var(--on-secondary-container);
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 6px;
+      color: var(--onPrimaryContainer);
+      border-bottom: 2px solid var(--onPrimaryContainer);
+      padding-bottom: 4px;
     }
 
     p {
       font-weight: 400;
       font-size: 1rem;
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 20px;
-      color: var(--on-surface);
     }
 
     strong {
@@ -103,7 +96,7 @@
     }
 
     a {
-      color: var(--primary);
+      color: var(--onPrimaryContainer);
       text-decoration: none;
       font-weight: 500;
     }
@@ -118,7 +111,7 @@
       }
 
       .container {
-        padding: 30px 20px 50px;
+        padding: 30px 20px;
       }
 
       h1 {
