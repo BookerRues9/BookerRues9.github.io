@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XDeltaTool Privacy Policy</title>
-  <!-- Fuente Roboto desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset básico */
     * {
       box-sizing: border-box;
     }
@@ -15,9 +13,9 @@
     body {
       margin: 0;
       padding: 40px 20px;
-      background-color: #121212; /* Material Dark background */
+      background-color: #171216; /* md_theme_background */
       font-family: 'Roboto', sans-serif;
-      color: #e0e0e0;
+      color: #EBDFE6; /* md_theme_onBackground */
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -25,18 +23,15 @@
     }
 
     .container {
-      background-color: #1e1e1e; /* dark card background */
+      background-color: #544151; /* md_theme_secondaryContainer */
       border-radius: 12px;
       max-width: 800px;
       width: 100%;
       padding: 40px 40px 60px 40px;
-      box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.9),
-        0 1px 3px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
       position: relative;
     }
 
-    /* Espacio para logo arriba a la derecha */
     .logo-container {
       position: absolute;
       top: 24px;
@@ -50,7 +45,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      filter: drop-shadow(0 0 4px #00fff2);
+      filter: drop-shadow(0 0 4px #EFB4E8); /* md_theme_primary */
       transition: transform 0.3s ease;
     }
 
@@ -60,19 +55,18 @@
 
     h1 {
       font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 8px;
-      color: #00fff2;
-      letter-spacing: 1.2px;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #EFB4E8; /* md_theme_primary */
     }
 
     h2 {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-top: 36px;
       margin-bottom: 16px;
-      color: #00bfa5;
-      border-bottom: 2px solid #00bfa5;
+      color: #FFD6F8; /* md_theme_onPrimaryContainer */
+      border-bottom: 2px solid #FFD6F8;
       padding-bottom: 4px;
     }
 
@@ -81,15 +75,14 @@
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 20px;
-      color: #ccc;
     }
 
     strong {
-      color: #fff;
+      color: #ffffff;
     }
 
     a {
-      color: #00bfa5;
+      color: #FFD6F8;
       text-decoration: none;
       font-weight: 500;
     }
@@ -130,7 +123,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- Logo con link a Google -->
     <a href="https://www.google.com" target="_blank" class="logo-container" aria-label="XDeltaTool Logo">
       <img src="https://lh3.googleusercontent.com/Hvt-8AiN8VZ2wM1mp3uKUtNJgMzBQmGDkBlRrXcncfz82ZvmbYZ-kWGi0D318JXjbQ" alt="XDeltaTool Logo" />
     </a>
@@ -140,16 +132,17 @@
 
     <p>This Privacy Policy applies to the Android application <strong>XDeltaTool</strong>, developed and published by Booker Dev.</p>
 
-    <p>XDeltaTool uses third-party services to provide a better experience and monetization options. These include:</p>
+    <h2>No Data Collection</h2>
+    <p><strong>XDeltaTool</strong> is a paid application that does not use ads or collect any personal data. The app works completely offline and does not require any form of login or network access to function.</p>
 
-    <h2>Advertising</h2>
-    <p>This app uses Google AdMob to display ads. AdMob may collect data such as device identifiers, usage data, and interaction data to show personalized or non-personalized ads in accordance with their <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">privacy policies</a>.</p>
+    <h2>Functionality</h2>
+    <p>The app allows users to apply and create XDelta patches using their own files. No data is sent to any external servers, and all operations occur locally on the user’s device.</p>
 
-    <h2>Cookies and Analytics</h2>
-    <p>This app does not use cookies or third-party analytics tools.</p>
+    <h2>Permissions</h2>
+    <p>XDeltaTool may request access to the file system through the Android Storage Access Framework (SAF) in order to read and write patch-related files. This access is used solely for the app’s core functionality.</p>
 
     <h2>Contact</h2>
-    <p>For questions about this policy, contact us at: <a href="mailto:bookerindiedev@gmail.com">bookerindiedev@gmail.com</a></p>
+    <p>If you have any questions about this policy or the app, please contact us at: <a href="mailto:bookerindiedev@gmail.com">bookerindiedev@gmail.com</a></p>
   </div>
 </body>
 </html>
