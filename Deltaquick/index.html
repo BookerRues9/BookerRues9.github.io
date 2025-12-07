@@ -142,9 +142,31 @@
     <h2>Privacy Policy</h2>
     <p>DeltaQuick does not collect, store, or share any personal data. The app works entirely offline, except when checking for updates through Google Play.</p>
 
-    <footer>
-      <p>&copy; 2025 DeltaQuick Project. This launcher is unofficial and made for personal use only. DT and related content are trademarks of their respective owners.</p>
-    </footer>
+   <footer>
+  <p>&copy; <span id="year"></span> DeltaQuick Project. This launcher is unofficial and made for personal use only. 
+  DT and related content are trademarks of their respective owners.</p>
+
+  <h2>Permissions Used</h2>
+  <p>DeltaQuick requires a small set of permissions strictly for the features of the app. 
+  No data is stored, transmitted, collected, or shared.</p>
+
+  <ul>
+    <li><strong>Microphone (RECORD_AUDIO)</strong> – Used only for the optional mini-game where the player controls actions using sound input. Audio is never recorded, saved, or sent anywhere.</li>
+
+    <li><strong>Read Media Audio (Android 13+)</strong> – Allows the app to access audio files (such as music) on the device so they can be selected and played inside the app. Files are not modified or uploaded.</li>
+
+    <li><strong>Read External Storage (Android 12 or lower)</strong> – Required only on older Android versions to let the app access the user’s songs or game files. This permission is automatically ignored on newer versions.</li>
+
+    <li><strong>Audio Playback</strong> – Needed to play music or sound effects inside the app. No information about playback is collected.</li>
+  </ul>
+
+  <p>DeltaQuick works fully offline. The app does not track users, serve ads, collect analytics, 
+  or share any personal information. All data stays on your device.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
   </div>
 </body>
 </html>
